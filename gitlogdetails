@@ -1,0 +1,12 @@
+#!/bin/bash
+
+read id
+Uswinid=$1
+
+read time
+time=$2
+
+echo "listing the number of commits of $1 in last $2"
+
+git log --oneline --since="$1" --author="$2"
+git log --oneline --since="$1" --author="$2" | wc -l
